@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow } from 'electron';
 import * as path from 'path'
 import * as url from 'url'
 import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer'
@@ -7,9 +7,10 @@ let mainWindow: Electron.BrowserWindow | null
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1100,
-    height: 700,
+    width: 800,
+    height: 600,
     backgroundColor: '#191622',
+    frame: false,
     webPreferences: {
       nodeIntegration: true
     }
