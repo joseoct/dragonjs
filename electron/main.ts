@@ -9,7 +9,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    backgroundColor: '#191622',
+    backgroundColor: '#161616',
     frame: false,
     webPreferences: {
       nodeIntegration: true
@@ -27,6 +27,9 @@ function createWindow() {
       })
     )
   }
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow?.setTitle("DragonJS");
+  })
 
   mainWindow.on('closed', () => {
     mainWindow = null
