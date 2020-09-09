@@ -1,7 +1,13 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+export const IconSpan = styled.span`
+    display: none; 
+`
+
+export const TitleSpan = styled.span``
 
 export const Button = styled.div`
-    display: felx;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -15,12 +21,20 @@ export const Button = styled.div`
 
     cursor: pointer;
 
-    :hover {
+    &:hover {
         transition: 0.5s;
-        background-color: ${ props => props.color }
+        background-color: ${props => props.color}
     }
-`;
+
+    &:hover ${IconSpan} {
+        display: block;
+    }
+
+    &:hover ${TitleSpan} {
+        display: none;
+    }
+`
 
 export const Image = styled.img`
     width: 60px;
-`;
+`

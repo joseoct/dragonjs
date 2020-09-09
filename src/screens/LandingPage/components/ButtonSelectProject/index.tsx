@@ -1,23 +1,27 @@
-import React from 'react';
+import React from 'react'
+import { IconBaseProps } from 'react-icons'
 
-import {    
-    Button,
-    Image
-} from './style';
+import {
+  Button,
+  IconSpan,
+  TitleSpan
+} from './style'
 
 interface ButtonProps {
     title: string;
-    icon: any;
+    icon: React.ComponentType<IconBaseProps>;
     color: string;
 }
 
-const ButtonSelectProject: React.FC<ButtonProps> = ({ title, icon, color }) => {
-    return (
-        <Button color={ color }>
-            <span style={{ position: 'absolute', left: '2%', fontSize: 20 }} >{ icon }</span>
-            <span>{ title }</span>
-        </Button>
-    )
+const ButtonSelectProject: React.FC<ButtonProps> = ({ title, icon: Icon, color }) => {
+  return (
+    <Button color={ color }>
+      <IconSpan>
+        <Icon size={24} />
+      </IconSpan>
+      <TitleSpan>{ title }</TitleSpan>
+    </Button>
+  )
 }
 
-export default ButtonSelectProject;
+export default ButtonSelectProject
