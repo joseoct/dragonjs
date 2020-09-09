@@ -10,6 +10,8 @@ export const Container = styled.header`
 
     background-color: #161616;
 
+    border-bottom: 1px solid #000;
+
     -webkit-app-region: drag;
 `
 

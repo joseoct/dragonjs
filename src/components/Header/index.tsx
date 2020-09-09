@@ -17,7 +17,6 @@ import {
 } from  './styles';
 
 interface HeaderProps{
-    icon?: string;
     title: string;
 }
 
@@ -43,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
     return (
         <Container>
             <Logo src={ logo } alt='logo' />
-            <span style={{ fontSize: '0.8rem', color: '#404040' }} >{ title }</span>
+            <span style={{ fontSize: '0.8rem' }} >{ title } </span>
             <ContainerButtons>
                 <Button color="#252525" onClick={ minimize } ><FiMinus/></Button>
                 <Button color="#252525" onClick={ maximize } ><FiSquare/></Button>
