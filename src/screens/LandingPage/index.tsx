@@ -3,8 +3,12 @@ import React from 'react';
 import Header from '../../components/Header';
 import ButtonSelectProject from './components/ButtonSelectProject';
 
+import logo from '../../assets/image/logo.png';
+
 import {
-    Container
+    Container,
+    LeftBar,
+    Logo
 } from './style';
 
 import {
@@ -14,6 +18,8 @@ import {
 } from 'react-icons/di';
 
 import { FiFile } from 'react-icons/fi'
+import TopBar from '../../components/TopBar';
+import Favorites from '../../components/Favorites';
 
 const LandingPage = () => {
     return (
@@ -21,26 +27,32 @@ const LandingPage = () => {
             <Header 
                 title="DragonJS" 
             />
-
-            <ButtonSelectProject
-                title="Open Project"
-                icon={ <FiFile/> }
-                color="red"
-            />
-            <ButtonSelectProject
-                title="New Default Project"
-                icon={ <DiJavascript1/> }
-                color="#f7df1d"
-            />
-            <ButtonSelectProject
-                title="New ReactJS"
-                icon={ <DiReact/> }
-                color="#60dbfc"
-            />
-            <ButtonSelectProject
-                title="New NodeJS"
-                icon={ <DiNodejsSmall/> }
-                color="#18bf3e"
+            <LeftBar>
+                <TopBar/>
+                <ButtonSelectProject
+                    title="Open Project"
+                    icon={ <FiFile/> }
+                    color="red"
+                />
+                <ButtonSelectProject
+                    title="New Default Project"
+                    icon={ <DiJavascript1/> }
+                    color="#f7df1d"
+                />
+                <ButtonSelectProject
+                    title="New ReactJS"
+                    icon={ <DiReact/> }
+                    color="#60dbfc"
+                />
+                <ButtonSelectProject
+                    title="New NodeJS"
+                    icon={ <DiNodejsSmall/> }
+                    color="#18bf3e"
+                />
+                <Favorites/>
+            </LeftBar>
+            <Logo
+                src={ logo }
             />
         </Container>
     )
